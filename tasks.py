@@ -352,7 +352,7 @@ o.shape == (100,) and o.mean().round(3) == 16.287 and o.std().astype(int) == 133
 
 # Your code here:
 # -----------------------------------------------
-def rnn_loss(w: np.array, w, list_of_sequences: list[np.array], y: np.array) -> np.float64:
+def rnn_loss(w: np.array, list_of_sequences: list[np.array], y: np.array) -> np.float64:
     pred = rnn_layer(w, list_of_sequences)
     loss = np.sum((y - pred)**2)
 
@@ -436,5 +436,3 @@ plt.plot(yy)
 plt.plot(pred)
 plt.plot(linreg_pred)
 plt.legend(['Truth','RNN','LinReg'])
-
-
